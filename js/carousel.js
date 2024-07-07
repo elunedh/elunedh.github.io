@@ -78,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
       // Previous button
       // Calls an anonymous function when the prev button is clicked
-      prev.addEventListener('click', function() {
+      prev.addEventListener('click', function(e) {
+        e.preventDefault();
     
         // If the image in view is not the first image...
         if(currentImage != 1) {
@@ -96,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
       // Next button
       // Calls an anonymous function when the next button is clicked
-      next.addEventListener('click', function() {
+      next.addEventListener('click', function(e) {
+        e.preventDefault();
     
         // If the image in view is not the last image...
         if(currentImage != imageCount) {
